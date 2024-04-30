@@ -29,3 +29,11 @@ Se desarrollará utilizando tecnologías front-end como XML y Android SDK y back
 • Dispositivo móvil compatible con Android.  
 • Android 4.1  
 • 40 megas de espacio.
+
+### Propuesta funcional:
+
+Registro y perfiles de usuario: los usuarios pueden crear perfiles personalizados donde ingresan información relevante como edad, género, peso, altura etc.  
+Exploración de recetas: los usuarios pueden explorar una amplia variedad de recetas saludables filtradas por categorías de comida. Estas recetas incluyen imágenes, ingredientes, instrucciones y valores nutricionales.  
+Creación de planes de alimentación: los usuarios pueden crear planes de alimentación adaptados a sus necesidades y objetivos. Pueden seleccionar recetas, ajustar proporciones. El sistema calculará los valores nutricionales de cada plan.
+
+Notificaciones y recordatorios: la app puede enviar notificaciones y recordatorios según los objetivos seleccionados por el usuario.

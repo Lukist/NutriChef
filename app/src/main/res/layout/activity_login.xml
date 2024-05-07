@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Actividades.Login"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:id="@+id/activity_login__header"
+            android:layout_width="wrap_content"
+            android:layout_height="600dp"
+            android:background="@drawable/login_background">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_login__header"
+            android:background="#78d370">
+
+            <TextView
+                android:id="@+id/activity_login__label_usuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuario"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="25dp"
+                />
+
+            <EditText
+                android:id="@+id/activity_login__input_usuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_login__label_usuario"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginLeft="20dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:background="@drawable/text_field"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:inputType="text"
+                />
+
+            <TextView
+                android:id="@+id/activity_login__label_contrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_login__input_usuario"
+                android:text="Contraseña"
+                android:textSize="25dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="17dp"
+                android:layout_marginLeft="25dp"/>
+
+            <EditText
+                android:id="@+id/activity_login__input_contrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_login__label_contrasena"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="100dp"
+                android:layout_marginLeft="20dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="5dp"
+                android:background="@drawable/text_field"
+                android:textColor="@color/white"
+                android:textSize="23dp"
+                android:inputType="textPassword"
+                />
+
+            <Button
+                android:id="@+id/activity_login__btn_ingresar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_login__input_contrasena"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:text="INGRESAR"
+                android:textColor="@color/white"
+                android:backgroundTint="#33ae28"/>
+
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>

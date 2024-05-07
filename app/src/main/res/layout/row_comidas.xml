@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="#F5F5F5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/list_item_default">
+
+        <TextView
+            android:id="@+id/row_comidas__titulo"
+            android:layout_width="213dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="100dp"
+            android:text="Titulo de comida"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/row_comidas__descripcion"
+            android:layout_width="213dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/row_comidas__titulo"
+            android:layout_marginLeft="25dp"
+            android:layout_marginBottom="25dp"
+            android:text="descripcion"
+            android:textColor="#696969" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-70dp"
+            android:layout_marginRight="15dp"
+            android:text="Ver Receta"
+            android:textSize="10dp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/verde_secundario"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/row_comidas__descripcion"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

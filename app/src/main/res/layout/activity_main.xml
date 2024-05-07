@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Actividades.MainActivity"
+    android:background="#F5F5F5">
+
+
+        <RelativeLayout
+            android:id="@+id/activity_main__header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/verde_principal"
+            >
+
+            <ImageView
+                android:id="@+id/activity_main__logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/logo_general"
+                android:layout_marginTop="19dp"
+                android:layout_marginLeft="14dp"
+                />
+
+            <TextView
+                android:id="@+id/activity_main__titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Encuentra la receta ideal"
+                android:layout_toRightOf="@id/activity_main__logo"
+                android:layout_marginTop="21dp"
+                android:layout_marginLeft="23dp"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_main__titulo"
+                android:layout_marginLeft="73dp"
+                android:layout_marginRight="45dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                android:paddingHorizontal="15dp"
+                android:paddingVertical="10dp"
+                android:background="@drawable/text_field"
+                android:hint="Desayuno, Almuerzo, Snacks, Cena.."
+                android:textSize="15dp"
+                android:drawableRight="@drawable/baseline_search_24"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/activity_main__body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/activity_main__header"
+            >
+
+            <ImageButton
+                android:id="@+id/activity_main__btn_add_receta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/baseline_post_add_24"
+                android:backgroundTint="@color/verde_secundario"
+                android:layout_alignParentRight="true"/>
+
+            <TextView
+                android:id="@+id/activity_main__subtitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="80dp"
+                android:text="Elija su proxima receta"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+            <ListView
+                android:id="@+id/activity_main__lv_lista_recetas"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:layout_below="@id/activity_main__subtitulo"
+                android:layout_marginTop="25dp"
+
+                />
+
+
+
+
+
+        </RelativeLayout>
+
+
+</RelativeLayout>

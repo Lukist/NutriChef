@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/activity_recetas_info__titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Registrar Receta"
+        android:textColor="@color/texto"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:id="@+id/activity_recetas_info__label_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/activity_recetas_info__titulo"
+        android:text="Titulo: "
+        android:textColor="@color/texto"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/activity_recetas_info__input_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_recetas_info__label_titulo"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/texto"
+        android:textSize="17dp"
+        android:inputType="text"
+        android:background="@drawable/text_field"/>
+
+    <TextView
+        android:id="@+id/activity_recetas_info__label_descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/activity_recetas_info__input_titulo"
+        android:text="Descripcion: "
+        android:textColor="@color/texto"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/activity_recetas_info__input_descripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_recetas_info__label_descripcion"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/texto"
+        android:textSize="17dp"
+        android:inputType="text"
+        android:background="@drawable/text_field"/>
+
+    <TextView
+        android:id="@+id/activity_recetas_info__label_categoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/activity_recetas_info__input_descripcion"
+        android:text="Categoria: "
+        android:textColor="@color/texto"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/activity_recetas_info__input_categoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_recetas_info__label_categoria"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/texto"
+        android:textSize="17dp"
+        android:inputType="text"
+        android:background="@drawable/text_field"/>
+
+    <TextView
+        android:id="@+id/activity_recetas_info__label_ingrediente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/activity_recetas_info__input_categoria"
+        android:text="Ingredientes"
+        android:textColor="@color/texto"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/activity_recetas_info__input_ingredientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_recetas_info__label_ingrediente"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/texto"
+        android:textSize="17dp"
+        android:inputType="text"
+        android:background="@drawable/text_field"/>
+
+
+    <TextView
+        android:id="@+id/activity_recetas_info__label_pasos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/activity_recetas_info__input_ingredientes"
+        android:text="Pasos"
+        android:textColor="@color/texto"
+        android:textSize="20dp"
+        />
+
+    <EditText
+        android:id="@+id/activity_recetas_info__input_pasos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_recetas_info__label_pasos"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/texto"
+        android:textSize="17dp"
+        android:inputType="text"
+        android:background="@drawable/text_field"/>
+
+
+    <TextView
+        android:id="@+id/activity_recetas_info__label_valor_energetico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/activity_recetas_info__input_pasos"
+        android:text="Valor Nutricional"
+        android:textColor="@color/texto"
+        android:textSize="20dp"
+        />
+
+
+    <EditText
+        android:id="@+id/activity_recetas_info__input_valor_energetico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_recetas_info__label_valor_energetico"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="15dp"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/texto"
+        android:textSize="17dp"
+        android:inputType="numberDecimal"
+        android:background="@drawable/text_field"
+        />
+
+
+
+</RelativeLayout>

@@ -3,35 +3,35 @@ package com.example.nutrichef.Modelos;
 import java.io.Serializable;
 
 public class ModeloReceta implements Serializable {
-    int idReceta;
-    String titulo;
-    String descripcion;
-    String categoria;
-    String ingrediente;
-    String pasos;
-    double valorNutricional;
-    long usuarioId;
+    private int id_receta;
+    private String titulo;
+    private String descripcion;
+    private String categoria;
+    private String ingredientes;
+    private String pasos;
+    private double valor_nutricional;
+    private int id_usuario;
 
     public ModeloReceta() {
     }
 
-    public ModeloReceta(int idReceta, String titulo, String descripcion, String categoria, String ingrediente, String pasos, double valorNutricional, long usuarioId) {
-        this.idReceta = idReceta;
+    public ModeloReceta(int id_receta, String titulo, String descripcion, String categoria, String ingredientes, String pasos, double valor_nutricional, int id_usuario) {
+        this.id_receta = id_receta;
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.categoria = categoria;
-        this.ingrediente = ingrediente;
+        this.ingredientes = ingredientes;
         this.pasos = pasos;
-        this.valorNutricional = valorNutricional;
-        this.usuarioId = usuarioId;
+        this.valor_nutricional = valor_nutricional;
+        this.id_usuario = id_usuario;
     }
 
-    public int getIdReceta() {
-        return idReceta;
+    public int getId_receta() {
+        return id_receta;
     }
 
-    public void setIdReceta(int idReceta) {
-        this.idReceta = idReceta;
+    public void setId_receta(int id_receta) {
+        this.id_receta = id_receta;
     }
 
     public String getTitulo() {
@@ -58,12 +58,12 @@ public class ModeloReceta implements Serializable {
         this.categoria = categoria;
     }
 
-    public String getIngrediente() {
-        return ingrediente;
+    public String getIngredientes() {
+        return ingredientes;
     }
 
-    public void setIngrediente(String ingrediente) {
-        this.ingrediente = ingrediente;
+    public void setIngredientes(String ingredientes) {
+        this.ingredientes = ingredientes;
     }
 
     public String getPasos() {
@@ -74,19 +74,19 @@ public class ModeloReceta implements Serializable {
         this.pasos = pasos;
     }
 
-    public double getValorNutricional() {
-        return valorNutricional;
+    public double getValor_nutricional() {
+        return valor_nutricional;
     }
 
-    public void setValorNutricional(double valorNutricional) {
-        this.valorNutricional = valorNutricional;
+    public void setValor_nutricional(double valor_nutricional) {
+        this.valor_nutricional = valor_nutricional;
     }
 
-    public long getUsuarioId() {
-        return usuarioId;
+    public int getId_usuario() {
+        return id_usuario;
     }
 
-    public void setUsuarioId(long usuarioId) {
-        this.usuarioId = usuarioId;
+    public void setId_usuario(int id_usuario) {
+        this.id_usuario = id_usuario;
     }
 }

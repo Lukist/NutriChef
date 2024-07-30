@@ -10,4 +10,6 @@
     <color name="verde_principal">#78d370</color>
     <color name="verde_secundario">#33ae28</color>
     <color name="texto">#323F4B</color>
+    <color name="negroSecundario">#1A1A1A</color>
+    <color name="tranparente">#00ffffff</color>
 </resources>

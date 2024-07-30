@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.example.nutrichef.Modelos.ModeloReceta;
+import com.example.nutrichef.Modelos.ModeloUsuario;
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
 import java.io.File;
@@ -77,10 +78,10 @@ public class DbHelper extends SQLiteAssetHelper {
         cv.put("titulo", receta.getTitulo());
         cv.put("descripcion", receta.getDescripcion());
         cv.put("categoria", receta.getCategoria());
-        cv.put("ingredientes", receta.getCategoria());
+        cv.put("ingredientes", receta.getIngredientes());
         cv.put("pasos", receta.getPasos());
-        cv.put("valor_nutricional", receta.getValorNutricional());
-        cv.put("id_usuario", receta.getUsuarioId());
+        cv.put("valor_nutricional", receta.getValor_nutricional());
+        cv.put("id_usuario", receta.getId_usuario());
 
         db.insert("Receta", null, cv);
 
@@ -106,7 +107,7 @@ public class DbHelper extends SQLiteAssetHelper {
                 String ingredientes = cursor.getString(4);
                 String pasos = cursor.getString(5);
                 double valorEnergetico = cursor.getDouble(6);
-                long id_usuario = cursor.getLong(7);
+                int id_usuario = cursor.getInt(7);
 
                 ModeloReceta receta = new ModeloReceta(id_receta, titulo, descripcion, categoria, ingredientes, pasos, valorEnergetico, id_usuario);
                 returnList.add(receta);
@@ -128,14 +129,50 @@ public class DbHelper extends SQLiteAssetHelper {
         cv.put("categoria", receta.getCategoria());
         cv.put("ingredientes", receta.getCategoria());
         cv.put("pasos", receta.getPasos());
-        cv.put("valor_nutricional", receta.getValorNutricional());
-        cv.put("id_usuario", receta.getUsuarioId());
+        cv.put("valor_nutricional", receta.getValor_nutricional());
+        cv.put("id_usuario", receta.getId_usuario());
 
         String whereClause = "id_receta = ?";
-        String[] whereArgs = { String.valueOf(receta.getIdReceta()) };
+        String[] whereArgs = { String.valueOf(receta.getId_receta()) };
 
         db.update("Receta", cv, whereClause, whereArgs);
 
+        db.close();
+    }
+
+    public ModeloUsuario comprobarLogin(String nombreUsuario, String clave) {
+        SQLiteDatabase db = getReadableDatabase();
+
+        ModeloUsuario usuario = new ModeloUsuario();
+
+        usuario.setUsuarioId(-1);
+
+        String query = "SELECT * FROM Usuario WHERE usuario = ? AND contrasena = ?";
+
+        Cursor cursor = db.rawQuery(query, new String[]{nombreUsuario, clave});
+
+        if (cursor != null && cursor.moveToFirst()) {
+            int usuarioId = cursor.getInt(0);
+            String usuarioNombre = cursor.getString(1);
+            String contrasena = cursor.getString(2);
+            String nombre = cursor.getString(3);
+            String apellido = cursor.getString(4);
+
+            usuario.setUsuarioId(usuarioId);
+            usuario.setUsuario(usuarioNombre);
+            usuario.setContrasena(contrasena);
+            usuario.setNombre(nombre);
+            usuario.setApellido(apellido);
+        }
+
+        return usuario;
+
+    }
+
+    public void deleteReceta(int idReceta) {
+        SQLiteDatabase db = getWritableDatabase();
+
+        db.delete("Receta", "id_receta = ?", new String[]{String.valueOf(idReceta)});
         db.close();
     }
 }

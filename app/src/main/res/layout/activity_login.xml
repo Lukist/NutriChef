@@ -1,101 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Actividades.Login"
+    android:background="@drawable/login_background"
     >
 
-
-    <RelativeLayout
+    <TextView
+        android:id="@+id/activity_login__tv_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        >
-        <RelativeLayout
-            android:id="@+id/activity_login__header"
-            android:layout_width="wrap_content"
-            android:layout_height="600dp"
-            android:background="@drawable/login_background">
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/activity_login__header"
-            android:background="#78d370">
-
-            <TextView
-                android:id="@+id/activity_login__label_usuario"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Usuario"
-                android:textSize="25dp"
-                android:textColor="@color/white"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="25dp"
-                />
-
-            <EditText
-                android:id="@+id/activity_login__input_usuario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/activity_login__label_usuario"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="100dp"
-                android:layout_marginLeft="20dp"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="5dp"
-                android:background="@drawable/text_field"
-                android:textColor="@color/white"
-                android:textSize="23dp"
-                android:inputType="text"
-                />
-
-            <TextView
-                android:id="@+id/activity_login__label_contrasena"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/activity_login__input_usuario"
-                android:text="Contraseña"
-                android:textSize="25dp"
-                android:textColor="@color/white"
-                android:layout_marginTop="17dp"
-                android:layout_marginLeft="25dp"/>
-
-            <EditText
-                android:id="@+id/activity_login__input_contrasena"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/activity_login__label_contrasena"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="100dp"
-                android:layout_marginLeft="20dp"
-                android:paddingHorizontal="15dp"
-                android:paddingVertical="5dp"
-                android:background="@drawable/text_field"
-                android:textColor="@color/white"
-                android:textSize="23dp"
-                android:inputType="textPassword"
-                />
-
-            <Button
-                android:id="@+id/activity_login__btn_ingresar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/activity_login__input_contrasena"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:text="INGRESAR"
-                android:textColor="@color/white"
-                android:backgroundTint="#33ae28"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.30"
+        android:text="NutriChef"
+        android:textStyle="bold"
+        android:textSize="70sp"
+        android:textColor="@color/white"
+        android:letterSpacing="0.1"
+        android:drawablePadding="5dp"/>
 
 
 
-        </RelativeLayout>
+    <EditText
+        android:id="@+id/activity_login__input_usuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/activity_login__input_contrasena"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/input_border_background"
+        android:padding="15dp"
+        android:hint="usuario"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:inputType="textCapSentences"/>
 
 
-    </RelativeLayout>
+    <EditText
+        android:id="@+id/activity_login__input_contrasena"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/activity_login__btn_ingresar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:hint="contraseña"
+        android:background="@drawable/input_border_background"
+        android:padding="15dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:inputType="textPassword"/>
 
-</ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/activity_login__btn_ingresar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="15dp"
+        android:text="INGRESAR"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="17sp"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

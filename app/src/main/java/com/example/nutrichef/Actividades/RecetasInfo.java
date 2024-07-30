@@ -20,7 +20,7 @@ public class RecetasInfo extends AppCompatActivity {
 
     EditText et_titulo, et_descripcion, et_categoria, et_ingredientes, et_pasos, et_valor_nutricional;
 
-    Button btn_cambiar;
+    Button btn_cambiar, btn_salir;
 
     DbHelper dbHelper;
 
@@ -35,6 +35,7 @@ public class RecetasInfo extends AppCompatActivity {
         et_ingredientes = findViewById(R.id.activity_recetas_info__input_ingredientes);
         et_pasos = findViewById(R.id.activity_recetas_info__input_pasos);
         et_valor_nutricional = findViewById(R.id.activity_recetas_info__input_valor_energetico);
+        btn_salir = findViewById(R.id.activity_recetas_info__btn_salir);
 
         btn_cambiar = findViewById(R.id.activity_recetas_info__btn_cambiar);
 
@@ -45,9 +46,9 @@ public class RecetasInfo extends AppCompatActivity {
         et_titulo.setText(receta.getTitulo());
         et_descripcion.setText(receta.getDescripcion());
         et_categoria.setText(receta.getCategoria());
-        et_ingredientes.setText(receta.getIngrediente());
+        et_ingredientes.setText(receta.getIngredientes());
         et_pasos.setText(receta.getPasos());
-        et_valor_nutricional.setText(String.valueOf(receta.getValorNutricional()));
+        et_valor_nutricional.setText(String.valueOf(receta.getValor_nutricional()));
 
         btn_cambiar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,13 +56,22 @@ public class RecetasInfo extends AppCompatActivity {
                 receta.setTitulo(et_titulo.getText().toString());
                 receta.setDescripcion(et_descripcion.getText().toString());
                 receta.setCategoria(et_categoria.getText().toString());
-                receta.setIngrediente(et_ingredientes.getText().toString());
+                receta.setIngredientes(et_ingredientes.getText().toString());
                 receta.setPasos(et_pasos.getText().toString());
-                receta.setValorNutricional(Double.parseDouble(et_valor_nutricional.getText().toString()));
+                receta.setValor_nutricional(Double.parseDouble(et_valor_nutricional.getText().toString()));
 
                 dbHelper.updateReceta(receta);
 
                 Toast.makeText(RecetasInfo.this, "La receta se a actualizado con exito!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btn_salir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RecetasInfo.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
     }

@@ -1,6 +1,7 @@
 package com.example.nutrichef.Adaptadores;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,7 +40,10 @@ public class RecetaAdapter extends ArrayAdapter<ModeloReceta> {
 
         ModeloReceta receta = lista_recetas.get(position);
 
+        Typeface typeface = Typeface.createFromAsset(mContext.getAssets(), "fonts/GreatVibes-Regular.ttf");
+
         TextView titulo = view.findViewById(R.id.row_comidas__titulo);
+        titulo.setTypeface(typeface);
         titulo.setText(receta.getTitulo());
 
         TextView descripcion = view.findViewById(R.id.row_comidas__descripcion);
